@@ -23,6 +23,17 @@ class TestCalculator(unittest.TestCase):
     def test_subtract_zero(self):
         """Test subtraction resulting in zero."""
         self.assertEqual(self.calc.subtract(5, 5), 0)
+        
+    def test_multiply_positive(self):
+        """Test multiplication with two positive numbers."""
+        self.assertEqual(self.calc.multiply(4, 3), 12)
+    def test_multiply_negative(self):
+        """Test multiplication with a negative and a positive number."""
+        self.assertEqual(self.calc.multiply(-2, 6), -12)
+    def test_multiply_zero(self):
+        """Test multiplication with zero."""
+        self.assertEqual(self.calc.multiply(0, 100), 0)        
+            
 
 if __name__ == '__main__':
     unittest.main()
